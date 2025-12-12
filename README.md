@@ -1,29 +1,80 @@
-# Library Management System
+# Library Management System (Java + MySQL)
 
-A console-based application to manage library books using **Java** for logic and **MySQL** for data persistence. This system implements full **CRUD** (Create, Read, Update, Delete) functionality.
+A robust console-based application to manage library records. This system uses **Java** for the application logic and **MySQL** for database storage, ensuring data persists securely. It implements full **CRUD** (Create, Read, Update, Delete) operations using JDBC.
 
 ## 🚀 Features
-- **Add Books**: Insert book details into the MySQL database.
-- **View Library**: Fetch and display all books in a formatted table.
-- **Update Records**: Modify book details by Book ID.
-- **Delete Books**: Remove books from the database.
-- **Database Connectivity**: Uses JDBC to communicate with MySQL.
 
-## 🛠️ Technology Stack
-- **Language**: Java (JDK 8+)
+- **Add Book**: Insert new book details (Title, Author, Quantity) into the database.
+- **Display Books**: Retrieve and view all available books in a formatted table.
+- **Update Book**: Modify existing book details (e.g., change quantity or fix typos).
+- **Delete Book**: Remove a book record permanently from the database.
+- **Database Connection**: Establishes a secure connection to MySQL using JDBC.
+
+## 🛠️ Tech Stack
+
+- **Language**: Java (JDK 8 or higher)
 - **Database**: MySQL
+- **Connectivity**: JDBC (Java Database Connectivity)
 - **Driver**: MySQL Connector/J
 
-## ⚙️ Setup & Installation
+## ⚙️ Database Setup (Required)
 
-### 1. Database Setup
-Run the following SQL script in your MySQL Workbench or Command Line:
-```sql
-CREATE DATABASE library_db;
-USE library_db;
-CREATE TABLE books (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(100),
-    author VARCHAR(100),
-    quantity INT
-);
+Before running the application, you must set up the MySQL database. Open your MySQL Workbench or Command Line Client and run the following SQL commands:
+
+    CREATE DATABASE library_db;
+
+    USE library_db;
+
+    CREATE TABLE books (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(100) NOT NULL,
+        author VARCHAR(100) NOT NULL,
+        quantity INT NOT NULL
+    );
+
+## 📝 Configuration
+
+1. Open the `LibrarySystem.java` file.
+2. Locate the database configuration section at the top of the class:
+
+    static final String USER = "root"; 
+    static final String PASS = "your_password"; 
+
+3. Change `"root"` and `"your_password"` to match your local MySQL credentials.
+
+## 💻 How to Run
+
+### 1. Download the JDBC Driver
+You need the **MySQL Connector/J** JAR file. 
+- [Download it here](https://dev.mysql.com/downloads/connector/j/) or use a Maven dependency.
+- Place the `.jar` file in the same folder as your java file for simplicity.
+
+### 2. Compile
+Open your terminal/command prompt in the project folder:
+
+    javac LibrarySystem.java
+
+### 3. Run
+*Note: You must include the path to the Connector JAR file in the classpath (`-cp`). Replace `mysql-connector-j-8.0.33.jar` with the actual name of the file you downloaded.*
+
+**On Windows:**
+
+    java -cp ".;mysql-connector-j-8.0.33.jar" LibrarySystem
+
+**On Mac / Linux:**
+
+    java -cp ".:mysql-connector-j-8.0.33.jar" LibrarySystem
+
+## 📂 Project Structure
+
+    ├── LibrarySystem.java        # The main source code
+    ├── README.md                 # Project documentation
+    └── mysql-connector-j-8.x.jar # JDBC Driver (Download separately)
+
+## 🔮 Future Improvements
+- Add a graphical user interface (GUI) using JavaFX or Swing.
+- Implement a search function to find books by title.
+- Add a "Borrow/Return" feature that automatically updates the quantity.
+
+---
+*Created by [Your Name]*
