@@ -77,4 +77,4 @@ Open your terminal/command prompt in the project folder:
 - Add a "Borrow/Return" feature that automatically updates the quantity.
 
 ---
-*Created by [Your Name]*
+*Created by Srilaxman.EU*
